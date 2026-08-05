@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOME</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+
+
+  <link rel="shortcut icon" href="/assets/favicons/orig-goji.png" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+</head>
+
+<body>
+
+<div id="loadingScreen">Loading</div>
+<noscript>
+    <style>
+        #loadingScreen {display: none;}
+        body {overflow-y: auto;}
+    </style>
+</noscript>
+
+  <div class="site-shell">
+
+    <header class="site-header">
+      <div class="site-title">
+        <a href="/home.html" onmouseover="mechclick.playclip()">INCIDENT <span class="red">1954</span></a>
+        <small id="shin_quotes"></small>
+      </div>
+
+      <nav class="main-nav"></nav>
+    </header>
+
+    <main class="grid">
+
+    <!--Welcome-->
+      <section class="box welcome span-2">
+        <div class="box-heading">
+          <span>01 // WELCOME</span>
+          <span class="red">● ONLINE</span>
+        </div>
+        <div class="welcome-content">
+          <h1>WELCOME TO THE TOKYO BAY ARCHIVE.</h1>
+          <p style="font-size: 13px;">
+            RUN! IT'S GODZILLA! (It looks like Godzilla, but due to international copyright laws - it's not.) STILL WE SHOULD RUN LIKE IT IS GODZILLA! (Though, it isn't.) AHHH!
+          </p>
+          <p class="muted">Last updated: <span class="red">07.31.2026</span></p>
+        </div>
+      </section>
+
+    <!--Piclog-->
+      <section class="box piclog">
+        <div class="box-heading">02 // PICLOG</div>
+
+        <a href="https://piclog.blue/profile.php?id=1352" target="_blank">
+          <img src="https://piclog.blue/latest.php?id=1352" onmouseover="mechclick.playclip()">
+        </a>
+      </section>
+
+    <!--Calendar-->
+      <section class="box calendar">
+        <div class="box-heading">03 // CALENDAR</div>
+
+          <iframe src="/assets/widgets/calendar/calendar.html" frameborder="0" id="calendarFrame"></iframe>
+
+          <a class="button" href="/calendar.html" onmouseover="mechclick.playclip()">VIEW</a>
+      </section>
+
+    <!--Mini-Status (Currently:...)-->
+      <section class="box mini-status">
+        <div class="box-heading">04 // CURRENTLY</div>
+
+          <div class="flex-row">
+
+            <div class="status-item">
+              <img src="/assets/page-specific/home/current/currently-watching.png" alt="watching" class="cover">
+              <img src="/assets/pixels/tv-icon.png" alt="watching icon" class="icon" title="Watching">
+              <div class="title-wrapper"><div class="current-title">Fullmetal Alchemist: Brotherhood</div></div>
+            </div>
+
+            <div class="status-item">
+              <img src="/assets/page-specific/home/current/currently-playing.png" alt="playing" class="cover">
+              <img src="/assets/pixels/game-icon.png" alt="playing icon" class="icon" title="Playing">
+              <div class="title-wrapper"><div class="current-title">Graveyard Keeper</div></div>
+            </div>
+
+            <div class="status-item">
+              <img src="/assets/page-specific/home/current/currently-reading.png" alt="reading" class="cover">
+              <img src="/assets/pixels/book-icon.png" alt="reading icon" class="icon" title="Reading">
+              <div class="title-wrapper"><div class="current-title">Nothing But Blackened Teeth — Cassandra Khaw</div></div>
+            </div>
+
+          </div>
+      </section>
+
+    <!--Recents-->
+      <section class="box recents span-2">
+        <div class="box-heading">05 // RECENTS</div>
+          <div class="recent-list">
+
+          <a href="#"> <!--Template-->
+            <span class="date">MM.DD.YYYY</span>
+            <span class="recent-title">Template recent here</span>
+            <span class="arrow" onmouseover="mechclick.playclip()">→</span>
+          </a>
+
+        </div>
+      </section>
+
+    <!--To-Do List-->
+      <section class="box todo-list">
+        <div class="box-heading">06 // TO-DO LIST</div>
+        
+          <ul class="check-list" style="max-height: 119px; overflow-y: scroll;">
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Finish homepage</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" checked>
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Figure out: BOX12 & Finish Neighbors box</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Finish About page</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Start other pages</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Move ABOUT CSS to about.css</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Edit links to correct file paths</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox">
+                    <span class="checkmark" onmouseover="mechclick.playclip()"></span>
+                    <span>Edit JS random pages links to correct file paths</span>
+                </label>
+            </li>
+            
+          </ul>
+      </section>
+
+    <!--Update Log-->
+      <section class="box updates span-2">
+        <div class="box-heading">
+          <span>07 // UPDATE LOG</span>
+          <a href="/update-log.html" onmouseover="mechclick.playclip()">VIEW IN-DEPTH →</a>
+        </div>
+          <div class="update">
+            <b>07.31</b>
+            <span>Home page created.</span>
+          </div>
+          <div class="update">
+            <b>07.28</b>
+            <span>About page added.</span>
+          </div>
+          <div class="update">
+            <b>07.25</b>
+            <span>Site started.</span>
+          </div>
+      </section>
+
+    <!--Random Page-->
+      <section class="box random-page">
+        <div class="box-heading">08 // TAKE A GAMBLE?</div>
+
+          <h3>Wanna try out a random page?</h3>
+
+        <a target="_blank" onclick="randomSite();" onmouseover="mechclick.playclip()" class="button">SURE</a>
+      </section>
+
+    <!--Guestbook-->
+      <section class="box guestbook">
+        <div class="box-heading">09 // GUESTBOOK</div>
+
+        <div class="box-body">
+          <a href="/guestbook.html">
+            <img src="/assets/images/sign-the-guestbook.gif" alt="guestbook">
+          </a>
+          <img src="/assets/images/youmadegojiblushomg.gif" alt="omg he blooooshed" title="woah dude hes signing... the guestbook" style="cursor: var(--help-cur), help;">
+        </div>
+      </section>
+
+    <!--My Buttons-->
+      <section class="box link-me">
+        <div class="box-heading">10 // LINK ME</div>
+        
+        <div class="box-body">
+          <a href="/assets/sitely/godzilla-button.gif" onmouseover="mechclick.playclip()" download>
+            <img src="/assets/sitely/godzilla-button.gif" alt="button 1" class="mybutton">
+          </a>
+
+          <a href="/assets/sitely/gojira.png" onmouseover="mechclick.playclip()" download>
+            <img src="/assets/sitely/gojira.png" alt="button 2" class="mybutton">
+          </a>
+
+          <a href="/assets/sitely/mini-goji.png" onmouseover="mechclick.playclip()" download>
+            <img src="/assets/sitely/mini-goji.png" alt="mini button 1" class="mybutton">
+          </a>
+          <a href="/assets/sitely/gojira.gif" onmouseover="mechclick.playclip()" download>
+            <img src="/assets/sitely/mini-goji2.png" alt="mini button 2" class="mybutton">
+          </a>
+
+          <a href="/assets/sitely/incident-1954-banner.gif" onmouseover="mechclick.playclip()" download>
+            <img src="/assets/sitely/incident-1954-banner.gif" alt="banner 1" class="mybutton">
+          </a>
+
+          <p title="Let me know if you do so I can add yours too. I love seeing everyones sites!">
+            Want to link me to your site? Just click the button you want to display and it'll download it!
+          </p>
+
+          <textarea readonly="">&lt;a href="https://incident-1954.neocities.org" target="_blank"&gt;&lt;img src="YOURFILEPATH" alt="incident-1954 button"&gt;&lt;/a&gt;</textarea>
+        </div>
+      </section>
+
+    <!--Mini Neighbors-->
+      <section class="box links span-2">
+        <div class="box-heading">
+          <span>11 // NEIGHBORS - CHECK THEM OUT TOO!</span>
+          <a href="/neighbors.html" onmouseover="mechclick.playclip()">VIEW ALL →</a>
+        </div>
+
+          <div class="box-body">
+
+              <a id="neighbor-link" target="_blank">
+                <img id="neighbor-preview" src="" alt="" onmouseover="mechclick.playclip()">
+              </a>
+
+              <div class="neighbor-info">
+                <h3 id="neighbor-name"></h3>
+
+                <div class="flex-row">
+                  <button class="button" onclick="previousSite()" onmouseover="mechclick.playclip()">←</button>
+                  <button class="button" onclick="nextSite()" onmouseover="mechclick.playclip()">→</button>
+                </div>
+
+                <p>Thank you to anyone who follows me! I love seeing everyones sites and creativity. Use the arrows to cycle through them and click the preview to go there!</p>
+              </div>
+
+          </div>
+        
+      </section>
+
+    <!--Little gif-->
+      <section class="box misc">
+        <div class="box-heading">12 // ???</div>
+
+        <div class="box-body">
+          <img src="https://file.garden/amleW7z-Rne7dDI7/Godzilla/girl-with-flowers.jpg" alt="girl with godzilla holding flowers" class="photo">
+          <img src="https://file.garden/amleW7z-Rne7dDI7/Godzilla/sippin-dr-p.gif" alt="godzilla sipping dr pepper" class="photo">
+          <img src="https://file.garden/amleW7z-Rne7dDI7/Godzilla/found-dead-in-miami.jpg" alt="godzilla found dead in miami" class="photo">
+          <img src="https://file.garden/amleW7z-Rne7dDI7/Godzilla/wtf-fnaf-4.jpg" alt="what the fuck godzilla in fnaf 4" class="photo">
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://neocities.org/site/incident-1954" target="_blank" onmouseover="mechclick.playclip()">NEOCITIES PROFILE</a>
+      <span>JULY 15, 2023 - FOREVER</span>
+      <a href="/html-cheat-sheet.html" target="_blank" onmouseover="mechclick.playclip()">CHEATSHEET</a>
+      <a href="/index.html" onmouseover="mechclick.playclip()">← INDEX.HTML</a>
+    </footer>
+
+  </div>
+
+<div class="eyes"></div>
+
+
+<script src="/script.js"></script>
+<script src="/assets/scripts/elements.js"></script>
+<script src="/assets/scripts/eye-tracking.js"></script>
+<script src="/assets/scripts/home.js"></script>
+</body>
+</html>
