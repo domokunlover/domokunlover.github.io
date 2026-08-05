@@ -1,0 +1,332 @@
+/* ---------- MAIN SHELL ---------- */
+
+.site-shell {
+  width: min(var(--max-width), 90vw);
+  margin-left: 5vw;
+  margin-right: auto;
+  padding: 28px 0 40px;
+}
+
+
+body {
+  background: url('/assets/images/goji-1.jpg') no-repeat;
+  background-position: bottom right;
+  background-size: 50em;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  border-bottom: 1px solid var(--red);
+  margin-bottom: 10px;
+}
+
+.site-title {
+  padding: 0 0 12px;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.site-title small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: stretch;
+}
+
+.main-nav a {
+  padding: 10px 12px;
+  border-right: 1px solid var(--line);
+  color: #aaa;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--red);
+  background: #120000;
+}
+
+/* ---------- GRID & FLEX ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- BOXES ---------- */
+
+.box {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 8, .96);
+}
+
+.box:hover {
+  border-color: var(--line-red);
+}
+
+.box-heading {
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 9px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-2);
+  color: #aaa;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.box-heading a {
+  color: var(--muted);
+}
+.box-heading a:hover {
+  color: var(--red);
+}
+
+.box > p,
+.box > h1,
+.box > h2 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.box > p {
+  color: var(--light-gray);
+}
+
+/* ---------- LISTS ---------- */
+
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 7px 10px;
+}
+
+.plain-list li {
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--line);
+  color: var(--light-gray);
+  font-size: 11px;
+}
+
+.plain-list li:last-child {
+  border-bottom: 0;
+}
+
+.plain-list span {
+  color: var(--red);
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+.check-list {
+  list-style: none;
+  margin: 0;
+  padding: 7px 10px;
+  cursor: var(--default-cur), default;
+}
+
+.check-list li {
+  border-bottom: 1px dotted var(--line);
+}
+.check-list li:last-child {
+  border-bottom: 0;
+}
+
+.check-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+
+  color: var(--light-gray);
+  font-size: 11px;
+  cursor: var(--default-cur), default;
+}
+
+.check-list input {
+  display: none;
+  cursor: var(--default-cur), default;
+}
+
+.checkmark {
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--line);
+  background: transparent;
+  flex-shrink: 0;
+  position: relative;
+  cursor: var(--pointer-cur), pointer;
+}
+.check-list input:checked + .checkmark {
+  background: var(--red);
+  border-color: var(--red);
+  cursor: var(--pointer-cur), pointer;
+}
+.check-list input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+
+  width: 2px;
+  height: 6px;
+
+  border: solid var(--black);
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+.check-list input:checked + .checkmark + span {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* ---------- MINI ---------- */
+
+.button {
+  min-width: 0;
+  width: 95%;
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 8, .96);
+  display: block;
+  margin: 5px auto;
+  padding: 4px 8px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--muted);
+}
+.button:hover,
+.button:focus {
+  border: 1px solid var(--red);
+  color: var(--red);
+  cursor: var(--pointer-cur), pointer;
+}
+
+
+textarea {
+  display: block;
+  height: 50px;
+  width: 100%;
+  resize: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--light-gray);
+  font-size: 11px;
+  outline: none;
+}
+textarea::placeholder {
+  color: #555;
+}
+textarea:focus {
+  border-color: var(--red);
+}
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+textarea::-webkit-scrollbar-track {
+  background: var(--black);
+}
+textarea::-webkit-scrollbar-thumb {
+  background: var(--line);
+}
+textarea::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+
+/* ---------- LINK BUTTONS ---------- */
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.button-grid a {
+  display: block;
+  color: #777;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  text-align: center;
+  height: 31px;
+  width: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-grid a img {
+  width: 88px;
+  height: 31px;
+  filter: grayscale(1);
+}
+.button-grid span.no-btn {
+  width: 88px;
+  height: 31px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-grid a:hover img {
+  border-color: var(--red);
+  color: var(--red);
+  cursor: var(--outlink-cur), alias;
+  filter: grayscale(0);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: #444;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.site-footer a:hover {
+  color: var(--red);
+}

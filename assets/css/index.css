@@ -1,0 +1,98 @@
+body {
+  background: url('/assets/images/goji-2.jpg') no-repeat;
+  background-position: bottom right;
+  background-size: 50em;
+}
+
+.warning-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-left: 8vw;
+}
+
+.warning-wrap {
+  width: min(680px, 82vw);
+}
+
+.warning-label {
+  margin-bottom: 10px;
+  color: var(--red);
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.warning-wrap h1 {
+  margin: 0 0 18px;
+  font-size: clamp(50px, 9vw, 100px);
+  line-height: .8;
+  letter-spacing: -6px;
+}
+
+.warning-box {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  border: 1px solid var(--red);
+  background: #080000;
+}
+
+.warning-icon {
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--red);
+  color: var(--red);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.warning-box > div:last-child {
+  padding: 15px;
+}
+
+.warning-box h2 {
+  margin: 0 0 7px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.warning-box p {
+  margin: 0;
+  color: #888;
+  font-size: 11px;
+}
+
+.warning-small {
+  color: #444;
+  font-size: 9px;
+}
+
+.enter-button {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+  margin-top: 22px;
+  padding: 10px;
+  border: 1px solid #333;
+  background: #050505;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.enter-button:hover {
+  border-color: var(--red);
+  background: #160000;
+  color: var(--red);
+}
+
+.corner-text {
+  position: fixed;
+  right: 15px;
+  bottom: 12px;
+  color: #333;
+  font-size: 8px;
+  letter-spacing: 1px;
+}

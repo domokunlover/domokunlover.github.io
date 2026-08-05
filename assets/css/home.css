@@ -1,0 +1,304 @@
+/* ---------- WELCOME ---------- */
+
+.welcome {
+  min-height: 210px;
+}
+
+.welcome-content {
+  padding: 15px;
+}
+
+.welcome h1 {
+  max-width: 600px;
+  margin: 0 0 12px;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: .95;
+  letter-spacing: -1.5px;
+}
+
+.welcome p {
+  max-width: 650px;
+}
+
+/* ---------- RECENTS ---------- */
+
+.recent-list a {
+  display: grid;
+  grid-template-columns: 75px 1fr 20px;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #1c1c1c;
+  font-size: 11px;
+}
+
+.recent-list a:last-child {
+  border-bottom: 0;
+}
+
+.date {
+  color: var(--red);
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.recent-title {
+  color: #bbb;
+}
+
+.arrow {
+  color: #555;
+  text-align: right;
+  cursor: var(--pointer-cur), pointer;
+}
+
+.recent-list a:hover .arrow {
+  color: var(--red);
+}
+
+
+/* ---------- STATUS ---------- */
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 10px;
+  border-bottom: 1px solid #1c1c1c;
+  font-size: 10px;
+}
+
+.status-row b {
+  color: var(--red);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+
+/* ---------- UPDATE LOG ---------- */
+
+.update {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 5px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #1c1c1c;
+  color: #999;
+  font-size: 10px;
+}
+
+.update b {
+  color: var(--red);
+}
+
+
+/* ---------- PICLOG ---------- */
+.piclog a {
+  height: 85%;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.piclog a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 230px;
+  max-height: 180px;
+}
+.piclog a img:hover {
+  cursor: var(--outlink-cur), alias;
+}
+
+
+/* ---------- CURRENTLY ---------- */
+
+
+.mini-status .flex-row .status-item {
+  position: relative;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.mini-status .title-wrapper {
+	position: absolute;
+  bottom: 90%;
+  left: 60%;
+  opacity: 0;
+  color: black;
+  z-index: 99;
+  transform: translateY(0px);
+  transition: .15s ease-in-out;
+  min-width: 100px;
+}
+
+.mini-status .title-wrapper .current-title {
+    font-size: 10px;
+
+    display: block;
+    width: fit-content;
+    max-width: 220px;
+    padding: 5px 10px;
+    background: white;
+    overflow-wrap: break-word;
+}
+
+
+.current-title:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -8px;
+}
+
+.mini-status .status-item:hover .title-wrapper {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.mini-status .status-item .cover {
+  border: 1px solid var(--line);
+  height: 100px;
+  cursor: var(--help-cur), help;
+}
+.mini-status .status-item .icon {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  background-color: var(--panel);
+  border-top: 1px dotted var(--line);
+  border-right: 1px dotted var(--line);
+  padding: 5px;
+}
+
+.mini-status .flex-row .status-item:hover {
+  outline: 1px solid var(--red);
+}
+
+/* ---------- RANDOM PAGE ---------- */
+
+.links .box-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 180px;
+  width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  gap: 45px;
+}
+#neighbor-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}
+#neighbor-preview {
+  width: 250px;
+  object-fit: cover;
+  transition: .25s;
+  filter: brightness(50%);
+  outline: 1px solid var(--line);
+}
+#neighbor-preview:hover {
+  cursor: var(--outlink-cur), alias;
+  filter: brightness(100%);
+}
+
+.neighbor-info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.neighbor-info .button {
+  width: max-content;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.neighbor-info #neighbor-name {
+
+}
+.neighbor-info .flex-row {
+  gap: 15px;
+}
+.neighbor-info p {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+
+/* ---------- RANDOM PAGE ---------- */
+
+.random-page h3 {
+  text-align: center;
+  height: 35%;
+}
+
+/* ---------- LINK ME ---------- */
+
+.link-me .box-body {
+  padding: 5px;
+}
+.link-me .mybutton:hover {
+  outline: 1px solid var(--text);
+  cursor: var(--download-cur), pointer;
+}
+.link-me p {
+  font-size: 10px;
+  text-align: justify;
+}
+
+/* ---------- GUESTBOOK ---------- */
+
+.guestbook a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  cursor: var(--default-cur), default;
+}
+.guestbook a img {
+  cursor: var(--pointer-cur), pointer;
+}
+.guestbook .box-body {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+/* ---------- MISC ---------- */
+
+.misc .box-body {
+  height: 190px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.misc .box-body .photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------- IFRAMES ---------- */
+
+#calendarFrame {
+  height: 175px;
+  width: 260px;
+  overflow: hidden;
+}
