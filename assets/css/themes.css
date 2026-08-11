@@ -1,0 +1,72 @@
+:root { /* DEFAULT THEME */
+    --main-font: 'basiic';
+    --header-font: 'script';
+
+    --main-bg: black;
+    --dots: #222;
+
+    --text: #DADADB;
+    --muted: #888;
+
+    --panel: #272727;
+    --panel-2: #131313;
+    --panel-3: #080808;
+
+    --border: var(--panel) 1px solid;
+    --box-shadow: 5px 5px 0 var(--main-bg), 6px 6px 0 var(--panel), 6px 4px 0 var(--panel), 4px 6px 0 var(--panel);
+
+
+
+
+    --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
+    --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
+    --busy-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
+    --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
+    --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
+    --pen-cur: url('/assets/graphics/cursors/ubuntu-set/Handwriting.cur');
+    --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
+    --horizontal-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
+    --move-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
+    --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
+    --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
+    --not-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
+    --vertical-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
+    --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
+}
+
+
+[data-theme="light"] {
+    --main-font: 'basiic';
+    --header-font: 'script';
+
+    --main-bg: white;
+    --dots: #b9b9b9;
+
+    --text: #1b1b1b;
+    --muted: #888;
+
+    --panel: #b3b3b3;
+    --panel-2: #b8b8b8;
+    --panel-3: #c9c9c9;
+
+    --border: var(--panel) 1px solid;
+    --box-shadow: 5px 5px 0 var(--main-bg), 6px 6px 0 var(--panel), 6px 4px 0 var(--panel), 4px 6px 0 var(--panel);
+
+
+
+
+    --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
+    --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
+    --busy-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
+    --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
+    --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
+    --pen-cur: url('/assets/graphics/cursors/ubuntu-set/Handwriting.cur');
+    --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
+    --horizontal-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
+    --move-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
+    --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
+    --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
+    --not-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
+    --vertical-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
+    --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
+}

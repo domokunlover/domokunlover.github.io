@@ -1,0 +1,71 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: none;
+    border: 1px solid var(--panel);
+}
+::-webkit-scrollbar-thumb:horizontal {
+    width: 10px;
+    background-color: none;
+    border: var(--border);
+    border-bottom: 0;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--main-bg);
+    border: var(--border);
+}
+::-webkit-scrollbar-track:horizontal {
+    border: var(--border);
+}
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: var(--main-bg);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--panel);
+    border-top: none;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+    background-color: var(--main-bg);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--panel);
+    border-bottom: none;
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+    background-color: var(--main-bg);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--panel);
+    border-top: none;
+}
+::-webkit-scrollbar-button:horizontal:increment {
+    background-color: var(--main-bg);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--panel);
+    border-top: none;
+}
+
+
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    cursor: var(--default-cur), default;
+}
+
+
+body {
+    background-image: radial-gradient(var(--dots) 0.5px, var(--main-bg) 0);
+    background-size: 5px 5px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow: hidden;
+}
