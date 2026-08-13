@@ -1,0 +1,122 @@
+/*----------------------- 
+        ABOUT BOX 
+-----------------------*/
+.about .flex-row {
+    justify-content: space-between;
+}
+.about .flex-row div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 55%;
+}
+
+.avatar-placeholder {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-4);
+  border: var(--border-width) dashed var(--color-line);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  line-height: 1.25;
+  text-align: center;
+  opacity: 0.65;
+}
+
+/*----------------------- 
+        STATUSES 
+-----------------------*/
+.statuses #lastFMwidget {
+    cursor: var(--pointer-cur), pointer;
+    height: 10px;
+    width: 250px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.statuses .mood {
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.status-list li {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dotted var(--color-line);
+}
+
+.status-list span {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: 0.45;
+}
+
+.status-list b {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+
+/*----------------------- 
+        UPDATE LOG 
+-----------------------*/
+.log-line {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px dotted var(--color-line);
+}
+
+.log-line time {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: 0.45;
+}
+
+.log-scroll {
+    overflow-y: scroll;
+    height: 200px;
+    padding-right: var(--space-3);
+}
+
+/*----------------------- 
+        CURRENTLY 
+-----------------------*/
+#statuscafe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#statuscafe #statuscafe-username {
+  font-family: var(--font-mono);
+}
+#statuscafe #statuscafe-username a:hover {
+  text-decoration: underline var(--color-text);
+  text-underline-offset: 5px;
+  cursor: var(--outlink-cur), alias;
+}
+
+#statuscafe #statuscafe-content {
+  font-size: var(--font-size-small);
+  margin-top: var(--space-4);
+  font-family: var(--fony-body);
+  text-align: justify;
+}
+

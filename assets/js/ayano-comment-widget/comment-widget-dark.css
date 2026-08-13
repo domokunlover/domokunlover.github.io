@@ -1,0 +1,331 @@
+/*
+    Below you will be able to freely customize every aspect of the comment widget.
+    Most aspects of the widget are 100% able to be customized in CSS, but for strong structural changes,
+    you may have to edit the JavaScript file.
+
+    These are all the classes and IDs at your disposal!
+    Classes have a c- at the start and IDs have a c_
+    You don't need every single one for a good theme, but I tried to give as many options as possible!
+*/
+/*
+    Containers:
+        #c_widget - The container <div> for the entire widget
+        #c_inputArea - The wrapper <div> around the form
+        #c_container - The wrapper <div> around all the comments
+
+    The input form:
+        #c_form - The whole input <form>
+        #c_widgetTitle - The <h2> title at the top of the form
+
+        .c-inputWrapper- All <div> wrappers for each label/input pair
+        .c-label - All <label>s
+        .c-input - All <input>s
+
+        #c_nameWrapper - The wrapper <div> for the name field
+        .c-nameLabel - The <label> for the name field
+        .c-nameInput - The <input> for the name field
+
+        #c_websiteWrapper - The wrapper <div> for the website field
+        .c-websiteLabel - The <label> for the website field
+        .c-websiteInput - The <input> for the website field
+
+        #c_textWrapper - The wrapper <div> for the text field
+        .c-textLabel - The <label> for the text field
+        .c-textInput - The <input> for the text field
+
+        #c_submitButton - The submit button (It's an <input> element with a type of "submit")
+        #c_replyingText - The text <span> that displays when a user is replying to a comment
+
+    The comment section:
+        .c-comment - All comment <div>s
+        .c-reply - All reply <div>s (contained within parent comment <div>s)
+        .c-replyContainer - The wrapper <div> for all replies
+        .c-name - The name of the person submitting the comment/reply (an <h3> element)
+        .c-timestamp - The timestamp of when the comment/reply was made (a <span> element)
+        .c-site - The website linked at the top of the comment/reply (an <a> element)
+        .c-text - The actual text body of the comment/reply (a <p> element)
+        .c-replyButton - All reply <button>s
+        .c-expandButton - The <button>s to reveal/hide replies (These only show if s_collapsedReplies is set to true in the JS)
+        
+        #c_pagination - The <div> wrapper for the pagination at the bottom (Only shows if there's more than one page)
+        .c-paginationButton - Both left and right directional <button>s
+        #c_leftButton - The left <button>
+        #c_rightButton - The right <button>
+*/
+
+
+/* Main */
+#c_widget {
+    box-sizing: border-box;
+    height: 100%;
+    color: var(--color-text);
+    width: 100%;
+}
+
+#c_widget button, #c_widget input[type=submit] {
+    padding: 4px 18px;
+    text-decoration: none;
+	text-align: center;
+    background: none;
+    color: var(--color-text);
+    border: 1px solid var(--color-line);
+    cursor: var(--pointer-cur), pointer;
+}
+#c_widget button:hover, #c_widget input[type=submit]:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+}
+#c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
+#c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
+    opacity: .68;
+}
+
+/* Input section */
+#c_inputDiv {
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    padding: 15px;
+    position: relative;
+}
+
+#c_widgetTitle {
+    margin: -10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 50px;
+    font-weight: 0;
+    text-align: center;
+    display: none;
+}
+
+.c-inputWrapper {
+    display: block;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.c-input {
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    position: relative;
+    color: var(--color-text);
+    padding: 4px;
+    font-size: 11px;
+    cursor: var(--text-cur), text;
+}
+.c-input:focus {
+    border: 1px solid var(--color-line);
+    outline: none;
+    cursor: var(--text-cur), text;
+}
+.c-input:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-line);
+    background: var(--color-bg);
+    cursor: var(--text-cur), text;
+}
+
+.c-textInput {
+    width: calc(100% - 10px);
+    max-width: 900px;
+    resize: none;
+}
+#c_submitButton {
+    display: block; 
+    margin-left: auto; 
+    margin-right: 0;
+}
+#c_replyingText {
+    color: var(--color-text);
+    text-align: right;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Comment section */
+.c-comment {
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    padding: 6px 10px;
+    transition: 0.35s;
+    position: relative;
+    margin: 15px auto;
+}
+.c-reply {
+    display: block;
+    width: 95%;
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    padding: 6px 10px;
+    position: relative;
+    margin: 15px auto;
+    margin-right: 0;
+}
+.c-reply:last-child {
+    margin-bottom: 0;
+}
+.c-replyContainer {
+    margin: -10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.c-name {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    padding: var(--space-2);
+    font-size: var(--font-size-small);
+    font-weight: none;
+    letter-spacing: 2px;
+    font-family: var(--font-cursive);
+}
+.c-site {
+    text-decoration: none;
+    opacity: .68;
+    vertical-align: middle;
+    cursor: var(--outlink-cur), alias;
+}
+.c-site:hover {
+    color: var(--color-text);
+    text-decoration: underline var(--color-text);
+    text-underline-offset: 5px;
+    cursor: var(--outlink-cur), alias;
+}
+.c-timestamp {
+    float: right;
+    opacity: 75%;
+}
+.c-text {
+    margin: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
+    color: var(--color-text);
+    background-color: var(--bg);
+    letter-spacing: 1.5px;
+    text-indent: 1em;
+}
+
+/* Pagination */
+#c_pagination {
+    text-align: center;
+}
+.c-replyButton {
+    margin-top: 10px;
+    margin-right: 4px;
+}
+.c-expandButton {
+    margin-top: 10px;
+    margin-left: 4px;
+}
+.c-paginationButton {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+
+
+
+
+:root {
+  /* ---------- COLORS ---------- */
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-alt: #181818;
+  --color-line: #303030;
+  --color-text: #dedede;
+  --color-text-2: #1d1d1d;
+  --text-shadow: -1px 0 var(--color-text), 0 1px var(--color-text), 1px 0 var(--color-text), 0 -1px var(--color-text), 0 0;
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-body: 'basiic', "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  --font-cursive: 'script';
+
+  --font-size-base: 12px;
+  --font-size-small: 10px;
+  --font-size-tiny: 9px;
+  --font-size-title: clamp(22px, 3vw, 34px);
+  --font-size-panel-title: 17px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --color-line-height: 1.55;
+  --letter-spacing: 0.02em;
+  --letter-spacing-wide: 0.14em;
+
+  /* ---------- LAYOUT ---------- */
+  --site-width: 1000px;
+  --content-max-width: 680px;
+  --space-page: 22px;
+
+  --nav-width: 100px;
+  --aside-width: 150px;
+  --column-gap: 16px;
+
+  /* ---------- SPACING ---------- */
+  --space-1: 4px;
+  --space-2: 7px;
+  --space-3: 10px;
+  --space-4: 14px;
+  --space-5: 18px;
+  --space-6: 24px;
+  --space-7: 32px;
+
+  /* ---------- BORDERS / SHAPES ---------- */
+  --border-width: 1px;
+  --border-style: solid;
+  --radius: 2px;
+  --radius-small: 1px;
+
+  /* ---------- COMPONENT DETAILS ---------- */
+  --header-height: 62px;
+  --panel-padding: 13px;
+  --aside-card-padding: 10px;
+  --avatar-size: 120px;
+
+  /* ---------- EFFECTS ---------- */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --transition: .15s ease-in-out;
+
+  /* ---------- MINI CSS ---------- */
+  --anime-girl: url('/assets/graphics/images/anime-girl-2.png');
+  --notepad-filter: grayscale(1) invert(1);
+
+  /* ---------- CURSORS ---------- */
+  --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
+  --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
+  --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
+  --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
+  --horizontal-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
+  --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
+  --grab-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
+  --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
+  --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
+  --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
+  --now-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
+  --vertical-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
+  --wait-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
+  --outlink-cur: url('/assets/graphics/cursors/ubuntu-set/added-by-me/outlink.cur');
+}
+
+[data-theme="light"] {
+  /* ---------- COLORS ---------- */
+  --color-bg: #f0f0f0;
+  --color-surface: #e2e2e2;
+  --color-surface-alt: #c7c7c7;
+  --color-line: #a5a5a5;
+  --color-text: #0e0e0e;
+  --color-text-2: #a5a5a5;
+  --text-shadow: -1px 0 var(--color-text), 0 1px var(--color-text), 1px 0 var(--color-text), 0 -1px var(--color-text), 0 0;
+
+  /* ---------- MINI CSS ---------- */
+  --anime-girl: url('/assets/graphics/images/anime-girl-3.png');
+  --notepad-filter: grayscale(1);
+
+}
