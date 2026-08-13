@@ -1,71 +1,147 @@
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-thumb {
-    width: 10px;
-    background-color: none;
-    border: 1px solid var(--panel);
-}
-::-webkit-scrollbar-thumb:horizontal {
-    width: 10px;
-    background-color: none;
-    border: var(--border);
-    border-bottom: 0;
-}
-::-webkit-scrollbar-track {
-    background-color: var(--main-bg);
-    border: var(--border);
-}
-::-webkit-scrollbar-track:horizontal {
-    border: var(--border);
-}
-::-webkit-scrollbar-button:vertical:increment {
-    background-color: var(--main-bg);
-    width: 10px;
-    height: 10px;
-    border: 1px solid var(--panel);
-    border-top: none;
-}
-::-webkit-scrollbar-button:vertical:decrement {
-    background-color: var(--main-bg);
-    width: 10px;
-    height: 10px;
-    border: 1px solid var(--panel);
-    border-bottom: none;
-}
-::-webkit-scrollbar-button:horizontal:decrement {
-    background-color: var(--main-bg);
-    width: 10px;
-    height: 10px;
-    border: 1px solid var(--panel);
-    border-top: none;
-}
-::-webkit-scrollbar-button:horizontal:increment {
-    background-color: var(--main-bg);
-    width: 10px;
-    height: 10px;
-    border: 1px solid var(--panel);
-    border-top: none;
+/* =========================================================
+   ROOT BASICS
+   Theme values are in /assets/css/themes.css.
+   Reusable components are in /assets/css/elements.css.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  image-rendering: optimizeQuality;
+  overscroll-behavior: none;
 }
 
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  cursor: var(--default-cur), default;
+}
 
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  text-rendering: optimizeLegibility;
+}
 
-* {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--text);
-    cursor: var(--default-cur), default;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: var(--pointer-cur), pointer;
+}
+a.link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+a.outlink {
+    cursor: var(--outlink-cur), alias;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+  font: inherit;
+  cursor: var(--pointer-cur), pointer;
+}
+
+button {
+  cursor: var(--pointer-cur), pointer;
+}
+
+pre {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.site-shell {
+  width: min(var(--site-width), calc(100% - (var(--space-page) * 2)));
+  margin: 0 25px;
+  z-index: 2;
+  position: relative;
 }
 
 
 body {
-    background-image: radial-gradient(var(--dots) 0.5px, var(--main-bg) 0);
-    background-size: 5px 5px;
-
+    overflow-y: hidden;
+}
+#loadingScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    user-select: none;
+    transition: opacity 300ms;
+    background: var(--color-bg);
+    color: var(--color-bg);
+    text-shadow: var(--text-shadow);
     display: flex;
-    flex-direction: row;
-    gap: 0;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: var(--font-cursive);
+}
+#loadingScreen::after {
+    content: '';
+    animation: loadingDots 1s linear infinite;
+}
+@keyframes loadingDots {
+    0%, 100% {content: '';}
+    25% {content: '.';}
+    50% {content: '..';}
+    75% {content: '...';}
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-line);
+  border-left: 1px solid var(--color-line);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-surface);
+  width: 10px;
+  border: 1px solid var(--color-line);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-bg);
+  cursor: var(--grab-cur), grab;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    radial-gradient(
+      circle at 0.5px 0.5px,
+      var(--color-line) 0.5px,
+      transparent 0
+    ) 0 / 4px 2px repeat,
+    radial-gradient(
+      circle at 2.5px 1.5px,
+      var(--color-line) 0.5px,
+      transparent 0
+    ) 0 / 4px 2px repeat,
+    var(--color-bg);
+
+  border: 1px solid var(--color-line);
 }

@@ -1,0 +1,127 @@
+/*----------------------- 
+        HERO 
+-----------------------*/
+.about-photo {
+  margin: 0;
+  padding: 0;
+  opacity: 0.65;
+
+  -webkit-mask-image: url('/assets/graphics/masks/square-blur.png');
+  -webkit-mask-size: 120%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;     
+}
+.about-photo img {
+  height: 135px;
+}
+
+.hero {
+  padding: 0;
+}
+.hero div.heading {
+  padding: var(--space-6);
+}
+
+/*----------------------- 
+        FAVOURITES 
+-----------------------*/
+.favourites .block-grid {
+  overflow-y: scroll;
+  padding: 0 4px;
+  max-height: 235px;
+}
+
+.favourites .block-grid .item {
+  position: relative;
+  height: 63px;
+  width: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favourites .block-grid .item img {
+  display: block;
+  width: 63px;
+  height: 63px;
+  object-fit: cover;
+}
+
+.favourites .block-grid .item .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 63px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  text-transform: uppercase;
+  cursor: var(--help-cur), help;
+  text-align: center;
+  outline: var(--border-style) var(--border-width) var(--color-text);
+  background: color-mix(in srgb, var(--color-bg) 50%, transparent);
+}
+
+.favourites .block-grid .item:hover .hover-text {
+  opacity: 1;
+}
+
+
+/*----------------------- 
+        INTERESTS 
+-----------------------*/
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.interest-list span {
+  padding: 4px 6px;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-surface-alt);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+}
+
+.interest-page#interests-more {
+  display: none;
+}
+.interests:has(#interests-more:target) #interests-main {
+  display: none;
+}
+.interests:has(#interests-more:target) #interests-more {
+  display: block;
+}
+
+#interests-more .interest-list {
+  overflow-y: scroll;
+  max-height: 150px;
+}
+
+
+
+
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.note-list p {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  gap: var(--space-2);
+  margin: 0;
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dotted var(--color-line);
+}
+
+.note-list span {
+  font-family: var(--font-mono);
+  opacity: 0.38;
+}

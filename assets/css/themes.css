@@ -1,72 +1,101 @@
-:root { /* DEFAULT THEME */
-    --main-font: 'basiic';
-    --header-font: 'script';
+:root {
+  /* ---------- COLORS ---------- */
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-alt: #181818;
+  --color-line: #303030;
+  --color-text: #dedede;
+  --color-text-2: #1d1d1d;
+  --text-shadow: -1px 0 var(--color-text), 0 1px var(--color-text), 1px 0 var(--color-text), 0 -1px var(--color-text), 0 0;
 
-    --main-bg: black;
-    --dots: #222;
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-body: 'basiic', "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  --font-cursive: 'script';
 
-    --text: #DADADB;
-    --muted: #888;
+  --font-size-base: 12px;
+  --font-size-small: 10px;
+  --font-size-tiny: 9px;
+  --font-size-title: clamp(22px, 3vw, 34px);
+  --font-size-panel-title: 17px;
 
-    --panel: #272727;
-    --panel-2: #131313;
-    --panel-3: #080808;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
-    --border: var(--panel) 1px solid;
-    --box-shadow: 5px 5px 0 var(--main-bg), 6px 6px 0 var(--panel), 6px 4px 0 var(--panel), 4px 6px 0 var(--panel);
+  --line-height: 1.55;
+  --letter-spacing: 0.02em;
+  --letter-spacing-wide: 0.14em;
 
+  /* ---------- LAYOUT ---------- */
+  --site-width: 1000px;
+  --content-max-width: 680px;
+  --space-page: 22px;
 
+  --nav-width: 100px;
+  --aside-width: 150px;
+  --column-gap: 16px;
 
+  /* ---------- SPACING ---------- */
+  --space-1: 4px;
+  --space-2: 7px;
+  --space-3: 10px;
+  --space-4: 14px;
+  --space-5: 18px;
+  --space-6: 24px;
+  --space-7: 32px;
 
-    --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
-    --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
-    --busy-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
-    --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
-    --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
-    --pen-cur: url('/assets/graphics/cursors/ubuntu-set/Handwriting.cur');
-    --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
-    --horizontal-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
-    --move-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
-    --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
-    --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
-    --not-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
-    --vertical-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
-    --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
+  /* ---------- BORDERS / SHAPES ---------- */
+  --border-width: 1px;
+  --border-style: solid;
+  --radius: 2px;
+  --radius-small: 1px;
+
+  /* ---------- COMPONENT DETAILS ---------- */
+  --header-height: 62px;
+  --panel-padding: 13px;
+  --aside-card-padding: 10px;
+  --avatar-size: 120px;
+
+  /* ---------- EFFECTS ---------- */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --transition: .15s ease-in-out;
+
+  /* ---------- MINI CSS ---------- */
+  --anime-girl: url('/assets/graphics/images/anime-girl-2.png');
+  --notepad-filter: grayscale(1) invert(1);
+
+  /* ---------- CURSORS ---------- */
+  --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
+  --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
+  --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
+  --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
+  --horizontal-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
+  --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
+  --grab-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
+  --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
+  --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
+  --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
+  --now-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
+  --vertical-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
+  --wait-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
+  --outlink-cur: url('/assets/graphics/cursors/ubuntu-set/added-by-me/outlink.cur');
 }
 
 
+
 [data-theme="light"] {
-    --main-font: 'basiic';
-    --header-font: 'script';
+  /* ---------- COLORS ---------- */
+  --color-bg: #f0f0f0;
+  --color-surface: #e2e2e2;
+  --color-surface-alt: #c7c7c7;
+  --color-line: #a5a5a5;
+  --color-text: #0e0e0e;
+  --color-text-2: #a5a5a5;
+  --text-shadow: -1px 0 var(--color-text), 0 1px var(--color-text), 1px 0 var(--color-text), 0 -1px var(--color-text), 0 0;
 
-    --main-bg: white;
-    --dots: #b9b9b9;
+  /* ---------- MINI CSS ---------- */
+  --anime-girl: url('/assets/graphics/images/anime-girl-3.png');
+  --notepad-filter: grayscale(1);
 
-    --text: #1b1b1b;
-    --muted: #888;
-
-    --panel: #b3b3b3;
-    --panel-2: #b8b8b8;
-    --panel-3: #e6e6e6;
-
-    --border: var(--panel) 1px solid;
-    --box-shadow: 5px 5px 0 var(--main-bg), 6px 6px 0 var(--panel), 6px 4px 0 var(--panel), 4px 6px 0 var(--panel);
-
-
-
-
-    --default-cur: url('/assets/graphics/cursors/ubuntu-set/Normal.cur');
-    --pointer-cur: url('/assets/graphics/cursors/ubuntu-set/Link.cur');
-    --busy-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
-    --nw-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 1.cur');
-    --ne-resize-cur: url('/assets/graphics/cursors/ubuntu-set/Diagonal\ Resize\ 2.cur');
-    --pen-cur: url('/assets/graphics/cursors/ubuntu-set/Handwriting.cur');
-    --help-cur: url('/assets/graphics/cursors/ubuntu-set/Help.cur');
-    --horizontal-cur: url('/assets/graphics/cursors/ubuntu-set/Horizontal\ Resize.cur');
-    --move-cur: url('/assets/graphics/cursors/ubuntu-set/Move.cur');
-    --crosshair-cur: url('/assets/graphics/cursors/ubuntu-set/Precision.cur');
-    --text-cur: url('/assets/graphics/cursors/ubuntu-set/Text.cur');
-    --not-allowed-cur: url('/assets/graphics/cursors/ubuntu-set/Unavailable.cur');
-    --vertical-cur: url('/assets/graphics/cursors/ubuntu-set/Vertical\ Resize.cur');
-    --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Working.ani');
 }
