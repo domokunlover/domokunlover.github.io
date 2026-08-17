@@ -10,6 +10,8 @@ const navHTML = `
 <a class="nav-link" href="/tracking.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">tracking</a>
 
 <a class="nav-link" href="/research.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">research</a>
+
+<a class="nav-link" href="/commonplace.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">commonplace</a>
 `
 
 const headerHTML = `
@@ -34,34 +36,73 @@ const asideHTML = `
 
 <div class="aside-card">
 <span class="aside-card-label">settings</span>
-    <p>
-        planed: toggle font, toggle sounds
-    </p>
+
+    <div class="toggle">
+        <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox font" id="fontToggle"/>
+        <label class="label" for="fontToggle">Toggle Font</label>
+    </div>
+
+    <div class="toggle">
+        <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="sounds" id="mute-checkbox" check/>
+        <label for="mute-checkbox">Toggle Sounds</label>
+    </div>
+
 </div>
+
+<a class="nav-link" href="/about.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">view the sitely</a>
 
 <div class="aside-card">
 <span class="aside-card-label">quick links</span>
 
-<a href="/assets/testing/code-test.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Code-Test.HTML</a>
+    <a href="/assets/testing/code-test.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Code-Test.HTML</a>
 
-<a href="/posts/template.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Blog Post Cheatsheet</a>
+    <a href="/posts/template.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Blog Post Cheatsheet</a>
 
-<a href="/not_found.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Current WIP Page</a>
+    <a href="/not_found.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Current WIP Page</a>
 
 </div>
 
-<br>
+    <div class="centered muted">
+        <pre>♰────────────────♰</pre>
+    </div>
 
-<div id="tab">
-
-<div class="nb"><div class="sp"></div>
-    <p>start /research/custom-keyboards.html</p>
+<div class="aside-card">
+<span class="aside-card-label">to-do / planned</span>
+    <div class="aside-card-body">
+        <ul class="list small">
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox" checked/>
+                <label class="label">sitely.html</label>
+            </li>
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox"/>
+                <label class="label">reviews.html + review-template.html</label>
+            </li>
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox"/>
+                <label class="label">resources.html</label>
+            </li>
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox"/>
+                <label class="label">credits.html</label>
+            </li>
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox"/>
+                <label class="label">collections.html + collection-template.html</label>
+            </li>
+            <li>
+                <input onmouseover="mechanical.playclip()" onclick="flashlight.playclip()" type="checkbox" class="checkbox"/>
+                <label class="label">cheatsheet.html</label>
+            </li>
+        </ul>
+    </div>
 </div>
 
-<div class="nb"><div class="sp"></div>
-    <p>
-        content
-    </p>
+<div class="aside-card">
+<span class="aside-card-label">sticky note</span>
+    <div class="aside-card-body">
+        <p>possible pages: commonplace, collections, credits, resources, dream journal? (maybe just make it a tag in blogs), coding cheatsheet (vsc shortcuts, etc), </p>
+    </div>
 </div>
 
 </div>

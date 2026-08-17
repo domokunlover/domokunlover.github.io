@@ -173,6 +173,11 @@
   opacity: 0.5;
 }
 
+.dotted {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}
+
 /*----------------------- 
         SITE-LY 
 -----------------------*/
@@ -320,6 +325,10 @@
 .aside-card a {
   font-size: var(--font-size-small);
 }
+.aside-card-body {
+  max-height: 75px;
+  overflow-y: auto;
+}
 
 .aside-card a {
   padding-bottom: 2px;
@@ -370,11 +379,16 @@ ul.list b {
   font-weight: var(--font-weight-normal);
 }
 
+ul.list.small li {
+  grid-template-columns: 15px 1fr !important;
+  padding: 2px;
+}
+
 
 ul.clean {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-1);
   list-style: '> ';
   list-style-position: inside;
 }
@@ -413,12 +427,51 @@ hr {
 }
 
 
-#musicPlayer {
-  width: 400px;
-  height: 250px;
-  position: absolute;
-  top: 75px;
-  right: 250px;
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-bg);
+  outline: none;
+  display: inline-grid;
+  place-content: center;
+  cursor: var(--pointer-cur), pointer;
+  transition: background var(--transition), outline var(--transition);
+}
+
+
+/* CHECKMARK */
+
+input[type="checkbox"]::before {
+  content: " ";
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+  transform: scale(0);
+  transition: transform var(--transition);
+}
+
+
+input[type="checkbox"]:checked {
+  background: var(--color-surface-alt);
+  border-color: var(--color-text);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:hover {
+  outline: var(--border-style) var(--border-width) var(--color-text);
+}
+
+
+.centered {
+  margin: 0 auto;
 }
 
 /*----------------------- 
@@ -432,6 +485,22 @@ hr {
 }
 #themeSwitcher:focus {
   outline: none;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: baseline;
+  gap: var(--space-2);
+  font-size: var(--font-size-small);
+}
+
+.toggle input.font[type="checkbox"]::before {
+  content: "★";
+}
+.toggle input.sounds[type="checkbox"]::before {
+  content: "♪";
 }
 
 /*----------------------- 
@@ -461,41 +530,4 @@ hr {
     transform:scaleX(-1);
     top: 0%;
     left: 45%;
-}
-
-
-/*----------------------- 
-        ASIDE TABS 
------------------------*/
-#tab {
-  width: 100%;
-  position: relative;
-}
-#tab .sp {
-  height: 14px;
-  width: 97.5%;
-  overflow: hidden;
-  position: absolute;
-  top: -10px;
-  left: 2px;
-  background: url('https://31.media.tumblr.com/89d0a73dbfd39d6e6dfcd157efacf73a/tumblr_inline_nc4ltugMJI1rh7826.png');
-  filter: var(--notepad-filter);
-}
-#tab .nb {
-  width: 100%;
-  max-height: 100px;
-  margin-bottom: 20px;
-  padding: 5px 10px 5px 10px;
-  background: url('https://31.media.tumblr.com/905e072082d7e170a96e198cf24af6d9/tumblr_inline_nc4ltqDhD21rh7826.png');
-  border: var(--border-style) var(--border-width) var(--color-text);
-  -webkit-border-bottom-right-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-  -moz-border-radius-bottomright: 6px;
-  -moz-border-radius-bottomleft: 6px;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-  font-size: 12px;
-  filter: var(--notepad-filter);
-  color: var(--color-text-2);
-  font-family: inherit;
 }

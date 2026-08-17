@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>neighbors | commonplace</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/elements.css">
+  <link rel="stylesheet" href="/assets/css/themes.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+
+  <link rel="shortcut icon" href="/assets/graphics/favicons/cobweb.png" type="image/x-icon">
+
+  <script src="/assets/js/loader/loader.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+
+  <style>
+    .neighbor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 88px);
+        gap: var(--space-3);
+        align-items: start;
+    }
+
+    .neighbor {
+        width: 90px;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        color: var(--color-text);
+        text-align: center;
+    }
+
+    .neighbor img {
+        width: 88px;
+        height: 31px;
+        object-fit: contain;
+        image-rendering: optimizeQuality;
+    }
+
+    .neighbor span {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: var(--font-mono);
+        font-size: var(--font-size-tiny);
+    }
+
+    .neighbor span {
+        mask-image: linear-gradient(to right, black 0%, black 78%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right,black 0%,black 78%, transparent 100%);
+    }
+
+    .pppp-link {
+        position: relative;
+    }
+
+    .pppp-preview {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 0;
+        box-shadow: var(--shadow);
+        z-index: 9999;
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    .pppp-preview iframe {
+        width: 1920px;
+        height: 1080px;
+        transform: scale(0.1);
+        transform-origin: top left;
+        pointer-events: none;
+    }
+
+    .pppp-preview.pppp-preview--visible {
+        display: block;
+        width: 192px;
+        height: 108px;
+    }
+  </style>
+</head>
+
+<body id="top">
+<div id="loadingScreen">Loading</div>
+<noscript>
+    <style>
+        #loadingScreen {display: none;}
+        body {overflow-y: auto;}
+    </style>
+</noscript>
+
+  <div class="site-shell">
+    <header class="site-header"></header>
+
+    <div class="site-layout">
+      <nav class="site-nav"></nav>
+
+      <main class="main-content">
+
+            <section class="hero">
+                <div>
+                    <p class="eyebrow"><a href="/commonplace.html" class="link" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">← go back</a> - commonplace // 007.2</p>
+                    <h1>neighbors<span class="cursor">_</span></h1>
+
+                    <p class="hero-copy">
+                        <pre>the coolest people on earth!</pre>
+                    </p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <p>Hover for a small preview of their site.</p>
+            </section>
+
+            <br>
+
+            <div class="neighbor-grid">
+
+                <a href="https://lizdotcom.neocities.org/" class="neighbor panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/lizdotcom.png" alt="lizdotcom">
+                    <span>lizdotcom</span>
+                </a>
+
+                <a href="https://labdanum.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/labdanum.png" alt="labdanum">
+                    <span>labdanum</span>
+                </a>
+
+                <a href="https://dumby.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/dumby.gif" alt="dumby">
+                    <span>dumby</span>
+                </a>
+
+                <a href="https://sweetheartmemory.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/sweetheartmemory.png" alt="sweetheartmemory">
+                    <span>sweetheartmemory</span>
+                </a>
+
+                <a href="https://philia995.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/philia995.gif" alt="philia995">
+                    <span>philia995</span>
+                </a>
+
+                <a href="https://404city.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/404city.gif" alt="404city">
+                    <span>404city</span>
+                </a>
+
+                <a href="https://funnyorangecat.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/funnyorangecat.gif" alt="funnyorangecat">
+                    <span>funnyorangecat</span>
+                </a>
+
+                <a href="https://brachypelmide.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/brachypelmide.gif" alt="brachypelmide">
+                    <span>brachypelmide</span>
+                </a>
+
+                <a href="https://ventablack.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/ventablack.png" alt="ventablack">
+                    <span>ventablack</span>
+                </a>
+
+                <a href="https://kdkemp.com/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/kdkemp.gif" alt="kdkemp">
+                    <span>kdkemp</span>
+                </a>
+
+                <a href="https://isobelsweb.com/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/isobelsweb.gif" alt="isobelsweb">
+                    <span>isobelsweb</span>
+                </a>
+
+                <a href="https://kkb.ooo/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/kkb.gif" alt="kkb">
+                    <span>kkb</span>
+                </a>
+
+                <a href="https://bummerdotcom.com/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/bummerdotcom.png" alt="bummerdotcom">
+                    <span>bummerdotcom</span>
+                </a>
+
+                <a href="https://bizly.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/bizly.gif" alt="bizly">
+                    <span>bizly</span>
+                </a>
+
+                <a href="https://millennium-whoop.github.io/aetherway/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/aetherway.gif" alt="aetherway">
+                    <span>aetherway</span>
+                </a>
+
+                <a href="https://chimerathing.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/chimerathing.png" alt="chimerathing">
+                    <span>chimerathing</span>
+                </a>
+
+                <a href="https://abberation.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/abberation.png" alt="abberation">
+                    <span>abberation</span>
+                </a>
+
+                <a href="https://2cherrish.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/2cherrish.gif" alt="2cherrish">
+                    <span>2cherrish</span>
+                </a>
+
+                <a href="https://wrygrinn.net/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/wrygrinn.gif" alt="wrygrinn">
+                    <span>wrygrinn</span>
+                </a>
+
+                <a href="https://kyrn0v.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/kyrn0v.gif" alt="kyrn0v">
+                    <span>kyrn0v</span>
+                </a>
+
+                <a href="https://nexos-den.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/nexos-den.png" alt="nexos-den">
+                    <span>nexos-den</span>
+                </a>
+
+                <a href="https://kockatriceking.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/kockatriceking.gif" alt="kockatriceking">
+                    <span>kockatriceking</span>
+                </a>
+
+                <a href="https://miet.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/miet.gif" alt="miet">
+                    <span>miet</span>
+                </a>
+
+                <a href="https://angeldolly.com/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/angeldolly.gif" alt="angeldolly">
+                    <span>angeldolly</span>
+                </a>
+
+                <a href="https://phailsnail.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/phailsnail.png" alt="phailsnail">
+                    <span>phailsnail</span>
+                </a>
+
+                <a href="https://multistuff.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/multistuff.png" alt="multistuff">
+                    <span>multistuff</span>
+                </a>
+
+                <a href="https://smokinghorse.neocities.org/" class="neighbor outlink panel pppp-link" target="_blank">
+                    <img src="/commonplace/neighbors/smokinghorse.gif" alt="smokinghorse">
+                    <span>smokinghorse</span>
+                </a>
+
+            </div>
+
+      </main>
+
+      <aside class="site-aside"></aside>
+    </div>
+
+    <footer class="site-footer"></footer>
+  </div>
+
+<div class="swirls-asciiart-container"></div>
+<div class="topright-asciiart-container"></div>
+<div class="bottomleft-asciiart-container"></div>
+
+<div class="anime-girl"></div>
+
+<script src="/script.js"></script>
+<script src="/assets/js/elements.js"></script>
+<script src="/assets/js/sound-effects/effects.js"></script>
+<script src="/assets/js/theme-switcher/switcher.js"></script>
+<script src="/assets/js/asciiart.js"></script>
+<script src="/assets/js/preview-plugin/preview.js"></script>
+</body>
+</html>

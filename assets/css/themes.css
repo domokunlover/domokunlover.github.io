@@ -1,3 +1,8 @@
+.toggle-font {
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-mono: monospace;
+}
+
 :root {
   /* ---------- COLORS ---------- */
   --color-bg: #0a0a0a;
@@ -63,7 +68,6 @@
 
   /* ---------- MINI CSS ---------- */
   --anime-girl: url('/assets/graphics/images/anime-girl-2.png');
-  --notepad-filter: grayscale(1) invert(1);
 
   /* ---------- CURSORS ---------- */
   --progress-cur: url('/assets/graphics/cursors/ubuntu-set/Busy.ani');
@@ -96,6 +100,5 @@
 
   /* ---------- MINI CSS ---------- */
   --anime-girl: url('/assets/graphics/images/anime-girl-3.png');
-  --notepad-filter: grayscale(1);
 
 }

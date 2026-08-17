@@ -1,0 +1,66 @@
+.commonplace-drawer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--border-width) var(--border-style) var(--color-line);
+  border-left: var(--border-width) var(--border-style) var(--color-line);
+}
+
+
+.commonplace-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-1) var(--space-2);
+  border-right: var(--border-width) var(--border-style) var(--color-line);
+  border-bottom: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background var(--transition);
+}
+.commonplace-item:nth-child(even) {
+  background: var(--color-surface);
+}
+
+.commonplace-item-wide {
+  grid-column: span 2;
+}
+
+.commonplace-item:has(.common-link:hover) {
+  background: var(--color-surface-alt);
+}
+
+
+
+.commonplace-item-body {
+  flex: 1;
+}
+
+.commonplace-item-body h2 {
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-medium);
+}
+.commonplace-item h2 a {
+  transition: opacity var(--transition), padding-left var(--transition);
+}
+
+.commonplace-item-body p {
+  font-size: var(--font-size-small);
+  opacity: .55;
+}
+
+
+.commonplace-item:hover {
+  background: var(--color-surface-alt);
+}
+.commonplace-item:hover .commonplace-item-body a {
+  padding-left: var(--space-2);
+}
+
+.commonplace-arrow {
+  display: none;
+  text-decoration: none !important;
+}
+
+.commonplace-item-body .link:hover .commonplace-arrow {
+  display: inline;
+}

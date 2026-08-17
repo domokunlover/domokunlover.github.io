@@ -91,7 +91,7 @@
   background: var(--color-surface-alt);
 }
 .research-item:hover .research-info a {
-    padding-left: var(--space-2);
+  padding-left: var(--space-2);
 }
 
 .research-arrow {
