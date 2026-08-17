@@ -1,0 +1,109 @@
+
+/*-----------------------
+        META
+-----------------------*/
+.research-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: var(--space-5);
+  border: var(--border-width) var(--border-style) var(--color-line);
+}
+
+.research-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border-right: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-bg);
+}
+
+.research-meta-item:last-child {
+  border-right: none;
+}
+
+.research-meta-item:nth-child(even) {
+  background: var(--color-surface);
+}
+
+.research-meta-item span {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.research-meta-item strong {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+
+
+.research-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+
+/*-----------------------
+        SECTIONS
+-----------------------*/
+.research-section {
+  padding: var(--panel-padding);
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+}
+
+.research-section:nth-child(even) {
+  background: var(--color-surface);
+}
+
+.research-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  font-size: var(--font-size-small);
+}
+
+
+/*-----------------------
+        SOURCES
+-----------------------*/
+.research-sources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.research-sources li {
+  padding-bottom: var(--space-2);
+  border-bottom: var(--border-width) dotted var(--color-line);
+}
+
+.research-sources li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
+
+/*-----------------------
+        FOOTER
+-----------------------*/
+
+.research-footer {
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: 0.6;
+}
+.research-footer:hover {
+  opacity: 1;
+}
+

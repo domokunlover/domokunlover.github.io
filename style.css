@@ -1,9 +1,3 @@
-/* =========================================================
-   ROOT BASICS
-   Theme values are in /assets/css/themes.css.
-   Reusable components are in /assets/css/elements.css.
-   ========================================================= */
-
 *,
 *::before,
 *::after {
@@ -28,6 +22,9 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 img {
@@ -75,6 +72,16 @@ pre {
   margin: 0 25px;
   z-index: 2;
   position: relative;
+}
+
+#s-m-t-tooltip{
+    max-width: 300px;
+    z-index: 10;
+    margin: var(--space-4) var(--space-3);
+    background: var(--color-bg);
+    color: var(--color-text);
+    padding: var(--space-1) var(--space-2);
+    border: var(--border-width) var(--border-style) var(--color-text);
 }
 
 

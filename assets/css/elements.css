@@ -371,6 +371,26 @@ ul.list b {
 }
 
 
+ul.clean {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: '> ';
+  list-style-position: inside;
+}
+
+ul.clean span {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: 0.45;
+}
+
+ul.clean b {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+
+
 hr {
   border: none;
   border-top: var(--border-style) var(--border-width) var(--color-line);

@@ -79,6 +79,7 @@
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
     opacity: .68;
+    cursor: var(--not-allowed-cur), not-allowed;
 }
 
 /* Input section */

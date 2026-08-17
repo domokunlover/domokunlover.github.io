@@ -1,0 +1,274 @@
+/*----------------------- 
+        HERO 
+-----------------------*/
+.tracking-stamp {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  text-align: center;
+  transform: rotate(2deg);
+  opacity: .6;
+}
+
+.tracking-stamp span {
+  display: block;
+  font-size: 17px;
+  line-height: 1
+}
+
+.tracking-stamp small {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  line-height: 1;
+  letter-spacing: .05em
+}
+
+/*----------------------- 
+        BASIC 
+-----------------------*/
+.tracking-directory {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7)
+}
+
+.tracking-section {
+  min-width: 0
+}
+
+.tracking-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--border-width) var(--border-style) var(--color-line);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+
+/*----------------------- 
+        CURRENT 
+-----------------------*/
+.tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  align-items: start
+}
+
+.tracking-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.tracking-card:hover {
+  background: var(--color-surface-alt);
+  border-color: var(--color-text);
+  transform: translateY(-2px)
+}
+
+.tracking-card-image {
+  min-height: 105px;
+  display: grid;
+  place-items: center;
+  border-bottom: var(--border-width) var(--border-style) var(--color-line);
+  background: repeating-linear-gradient(135deg, var(--color-surface-alt) 0, var(--color-surface-alt) 1px, var(--color-surface) 1px, var(--color-surface) 5px);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: var(--letter-spacing-wide);
+  opacity: .65;
+}
+
+.tracking-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--panel-padding)
+}
+
+.tracking-card-top,
+.tracking-progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3)
+}
+
+.tracking-number,
+.tracking-status {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: .05em;
+  text-transform: uppercase
+}
+
+.tracking-number {
+  opacity: .4
+}
+
+.tracking-status {
+  opacity: .55
+}
+
+.tracking-card h2 {
+  font-size: var(--font-size-panel-title);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2
+}
+
+.tracking-card p {
+  font-size: var(--font-size-small);
+  opacity: .65
+}
+
+.tracking-progress {
+  margin-top: var(--space-2)
+}
+
+.tracking-progress-label {
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: .55
+}
+
+.tracking-progress-bar {
+  height: 4px;
+  overflow: hidden;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-bg)
+}
+
+.tracking-progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--color-text)
+}
+
+.tracking-meta {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-top: 1px dotted var(--color-line);
+  border-bottom: 1px dotted var(--color-line);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny)
+}
+
+.tracking-meta b {
+  font-weight: var(--font-weight-normal);
+  opacity: .7
+}
+
+.tracking-card-link {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px dotted var(--color-line);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: .04em;
+  text-transform: lowercase;
+  opacity: .6
+}
+
+
+/*----------------------- 
+        PLANNED 
+-----------------------*/
+.tracking-list {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-width) var(--border-style) var(--color-line)
+}
+
+.tracking-list-item {
+  display: grid;
+  grid-template-columns: 35px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px dotted var(--color-line);
+  transition: padding-left var(--transition), background var(--transition);
+}
+
+.tracking-list-item:hover {
+  padding-left: var(--space-2);
+  background: var(--color-surface)
+}
+
+.tracking-list-item>div {
+  min-width: 0
+}
+
+.tracking-list-item h2 {
+  margin-bottom: 2px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium)
+}
+
+.tracking-list-item p {
+  font-size: var(--font-size-tiny);
+  opacity: .5
+}
+
+.tracking-list-item .tracking-status {
+  white-space: nowrap
+}
+
+.tracking-archive {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+
+/*----------------------- 
+        ACHIVE 
+-----------------------*/
+.archive-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  transition: background var(--transition);
+  border: var(--border-width) var(--border-style) var(--color-line);
+}
+
+.archive-item:hover {
+  background: var(--color-surface-alt);
+}
+
+.archive-item span,
+.archive-item small {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  opacity: .4;
+}
+
+.archive-item b {
+  min-width: 0;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+
+.archive-item small {
+  grid-column: 2;
+  margin-top: 2px;
+}

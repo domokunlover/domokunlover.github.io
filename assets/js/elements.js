@@ -2,11 +2,18 @@ const navHTML = `
 <div class="nav-label">navigation</div>
 
 <a class="nav-link" href="/about.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">about</a>
+
 <a class="nav-link" href="/blog.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">blog</a>
+
+<a class="nav-link" href="/shrines.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">shrines</a>
+
+<a class="nav-link" href="/tracking.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">tracking</a>
+
+<a class="nav-link" href="/research.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">research</a>
 `
 
 const headerHTML = `
-<a class="site-title" href="/index.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">cobweb.crawler</a>
+<a class="site-title" href="/home.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">cobweb.crawler</a>
 
 <div class="header-status">
     <span class="status-dot"></span>
@@ -36,8 +43,10 @@ const asideHTML = `
 <span class="aside-card-label">quick links</span>
 
 <a href="/assets/testing/code-test.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Code-Test.HTML</a>
+
 <a href="/posts/template.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Blog Post Cheatsheet</a>
-<a href="#" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Current WIP Page (NONE)</a>
+
+<a href="/not_found.html" onmouseover="mechanical.playclip()" onclick="flashlight.playclip()">Current WIP Page</a>
 
 </div>
 
@@ -46,9 +55,7 @@ const asideHTML = `
 <div id="tab">
 
 <div class="nb"><div class="sp"></div>
-    <p>
-        content
-    </p>
+    <p>start /research/custom-keyboards.html</p>
 </div>
 
 <div class="nb"><div class="sp"></div>

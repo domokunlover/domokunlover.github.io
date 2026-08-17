@@ -1,0 +1,208 @@
+/*----------------------- 
+        HERO STATS 
+-----------------------*/
+.directory-stats {
+  min-width: 55px;
+  padding: var(--space-2);
+  border: var(--border-width) var(--border-style) var(--color-line);
+  text-align: center;
+  transform: rotate(2deg);
+  opacity: .7;
+}
+.directory-stats span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 18px;
+}
+.directory-stats small {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/*----------------------- 
+        SECTIONS 
+-----------------------*/
+.shrine-directory-section {
+  margin-bottom: var(--space-7);
+  scroll-margin-top: var(--space-5);
+}
+
+.directory-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--border-width) var(--border-style) var(--color-line);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  opacity: .55;
+}
+
+.shrine-grid {
+  columns: 2 240px;
+  column-gap: var(--space-4);
+}
+
+.shrine-card {
+  display: inline-block;
+  width: 100%;
+  height: max-content;
+  min-width: 0;
+  overflow: hidden;
+  border: var(--border-width) var(--border-style) var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+  margin-bottom: var(--space-2);
+}
+
+.shrine-card:hover {
+  border-color: var(--color-text);
+  background: var(--color-surface-alt);
+  transform: translateY(-2px);
+}
+
+.shrine-card-image {
+  min-height: 115px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: var(--border-width) var(--border-style) var(--color-line);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 5px,
+      var(--color-line) 5px,
+      var(--color-line) 6px
+    );
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: .12em;
+  opacity: .7;
+}
+
+.shrine-card-tall .shrine-card-image {
+  min-height: 170px;
+}
+
+.shrine-card-wide {
+  display: grid;
+  grid-template-columns: minmax(100px, .75fr) 1fr;
+}
+
+.shrine-card-wide .shrine-card-image {
+  min-height: 170px;
+  border-right: var(--border-width) var(--border-style) var(--color-line);
+  border-bottom: 0;
+}
+
+.shrine-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shrine-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-4);
+}
+
+.shrine-card-number {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  opacity: .4;
+}
+
+.shrine-card h2 {
+  margin-bottom: var(--space-2);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+}
+
+.shrine-card p {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-small);
+  line-height: 1.6;
+  opacity: .55;
+}
+
+.shrine-card-link {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .55;
+}
+
+.shrine-card:hover .shrine-card-link {
+  opacity: 1;
+}
+
+.shrine-card-note {
+  min-height: 130px;
+  justify-content: center;
+}
+
+.directory-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: var(--border-width) dotted var(--color-line);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  opacity: .4;
+}
+
+
+
+
+.shrine-directory#shrines-planned {
+  display: none;
+}
+
+.main-content:has(#shrines-planned:target) #shrines-main {
+  display: none;
+}
+
+.main-content:has(#shrines-planned:target) #shrines-planned {
+  display: block;
+}
+
+.planned-card {
+  width: 100%;
+  display: block;
+  border: var(--border-style) var(--border-width) var(--color-line);
+  padding: var(--space-3);
+  break-inside: avoid;
+}
+.planned-card ul.list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+.planned-card ul.list li {
+  width: 100%;
+  display: block;
+  padding: var(--space-1);
+  padding-left: 15px;
+}
+.planned-card ul.list li:nth-child(even) {
+  background-color: var(--color-surface);
+}

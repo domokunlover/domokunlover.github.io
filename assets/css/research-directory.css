@@ -1,0 +1,104 @@
+.research-directory {
+  width: 100%;
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-width) var(--border-style) var(--color-line);
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-5);
+
+  padding: var(--space-1) var(--space-2);
+
+  border: var(--border-width) var(--border-style) var(--color-line);
+  border-top: none;
+
+  background: var(--color-bg);
+
+  transition: background var(--transition);
+}
+
+.research-item:nth-child(even) {
+  background: var(--color-surface);
+}
+
+
+/*-----------------------
+        CARD
+-----------------------*/
+.research-item-main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.research-info {
+  min-width: 0;
+}
+
+.research-info h2 {
+  margin-bottom: var(--space-1);
+
+  font-size: var(--font-size-panel-title);
+  font-weight: var(--font-weight-medium);
+}
+
+.research-info h2 a {
+  transition: opacity var(--transition), padding-left var(--transition);
+}
+
+
+.research-info a:hover::before {
+  opacity: 1;
+}
+
+.research-info p {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  opacity: 0.55;
+}
+
+.research-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+
+  min-width: 155px;
+
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-tiny);
+
+  text-align: right;
+  opacity: 0.55;
+}
+
+.research-meta b {
+  font-weight: normal;
+  opacity: 0.65;
+}
+
+
+.research-item:hover {
+  background: var(--color-surface-alt);
+}
+.research-item:hover .research-info a {
+    padding-left: var(--space-2);
+}
+
+.research-arrow {
+  display: none;
+  text-decoration: none !important;
+}
+
+.research-info .link:hover .research-arrow {
+  display: inline;
+}
